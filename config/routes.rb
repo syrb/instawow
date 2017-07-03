@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   get "/team" => "pages#team"
   get "/contact" => "pages#join_us"
-  get "/products/" => "products#index"
-  get "/products/:id" => "products#show"
+
+  resources :products
 
 end
