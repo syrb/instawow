@@ -12,6 +12,10 @@ User.destroy_all
 syrbain = User.create!(email: 'celliersyrbain@yahoo.fr', password: 'password')
 seto = User.create!(email: 'syrbaincellier@gmail.com', password: 'password')
 
-Product.create!(user: syrbain, name: "Kudoz", url: "wwww.kudoz.com", tagline: "Tinder for job search", category: "tech")
+kudoz = Product.create!(user: syrbain, name: "Kudoz", url: "wwww.kudoz.com", tagline: "Tinder for job search", category: "tech")
 Product.create!(user: syrbain, name: "uSlide", url: "wwww.uslide.io", tagline: "YouTube sucks for education", category: "education")
 Product.create!(user: seto, name: "Medpics", url: "wwww.medpics.com", tagline: "Share your diagnostics", category: "tech")
+
+# Upvotes
+kudoz.upvotes.create! user: syrbain
+kudoz.upvotes.create! user: seto
